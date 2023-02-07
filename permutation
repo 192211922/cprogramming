@@ -1,0 +1,20 @@
+{
+int i;
+if (l == r)
+printf("%s\n", a);
+else {
+for (i = l; i<= r; i++) {
+swap((a + l), (a + i));
+permute(a, l + 1, r);
+swap((a + l), (a + i));
+}
+}
+}
+main()
+{
+char str[20];
+printf("Enter a number : ");
+scanf("%s",&str);
+int n = strlen(str);
+permute(str, 0, n - 1);
+}
